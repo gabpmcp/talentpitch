@@ -1,25 +1,56 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# Go related
+/bin/
+/pkg/
+/coverage.out
+
+# Go build artifacts
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-
-# Test binary, built with `go test -c`
 *.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Vendor directory (for vendored dependencies)
+vendor/
 
-# Go workspace file
-go.work
-go.work.sum
+# Logs
+*.log
 
-# env file
-.env
+# IDE/editor related
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+__pycache__/
+
+# Node.js related
+init-scripts/data-gpt/node_modules/
+init-scripts/data-gpt/npm-debug.log*
+init-scripts/data-gpt/yarn-error.log*
+init-scripts/data-gpt/pnpm-debug.log*
+
+# Ignore lock files (depending on your package manager)
+# Uncomment if you don't want to track these files, but it's recommended to keep them for consistency
+#init-scripts/data-gpt/package-lock.json
+#init-scripts/data-gpt/yarn.lock
+#init-scripts/data-gpt/pnpm-lock.yaml
+
+# Ignore .env files (if they contain sensitive information)
+*.env
+
+# Ignore build output for Node.js
+init-scripts/data-gpt/build/
+init-scripts/data-gpt/dist/
+init-scripts/data-gpt/.next/
+init-scripts/data-gpt/out/
+init-scripts/data-gpt/.nuxt/
+
+# OS generated files
+Thumbs.db
+Desktop.ini
